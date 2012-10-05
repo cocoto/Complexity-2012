@@ -1,7 +1,6 @@
-#include <String>
 #include <iostream>
 
-int algo1(const char S,const char T,const int &n)
+int algo1( char* S, char* T,const int &n)
 {
    int mlsuff[n][n];
    int i,j,max=0;
@@ -30,7 +29,7 @@ int algo1(const char S,const char T,const int &n)
      {
        
         if(S[i]==T[i])
-	{
+    {
 	   mlsuff[i][j]=mlsuff[i-1][j-1]+1;
 	}
 	else
@@ -54,5 +53,5 @@ int algo1(const char S,const char T,const int &n)
        }
      }
    }
-   return mlsuff;
+   return max;
 }
