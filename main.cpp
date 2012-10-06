@@ -1,5 +1,6 @@
 #include "algo2.cpp"
 #include "algo1.cpp"
+#include "generateur.cpp"
 
 int main(int argc, char *argv[]){
     char* test1 = new char[10+1];
@@ -71,4 +72,11 @@ int main(int argc, char *argv[]){
     delete[] test3;
     delete[] test4;
     
+    char* c;
+    for(int i=0;i<50;i++)
+    {
+      c=random_generate(n,i);
+      std::cout<<c<<'\n';
+      free(c);
+    }
 }
