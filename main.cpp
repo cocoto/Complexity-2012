@@ -44,6 +44,7 @@ int main(int argc, char *argv[]){
       T=(char*)malloc(taille*sizeof(char));
       T[0]=' ';
       fichier>>&S[1];
+      strcpy(T,S);
       ligne_courante=fichier.tellg();
     } 
     else
@@ -129,7 +130,7 @@ int main(int argc, char *argv[]){
 	      }
 	      cpt+=2;
 	      //Décommenter pour débug
-	      //std::cout<< S <<" et "<< T <<"  =  "<< value << " en "<<time<<"ms total "<<sum/1000<<"s \n";
+	      std::cout<< S <<" et "<< T <<"  =  "<< value << " en "<<time<<"ms total "<<sum/1000<<"s \n";
 	      fichier>>&T[1];
 	}
 	
