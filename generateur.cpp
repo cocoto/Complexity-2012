@@ -8,6 +8,7 @@ char* random_generate(const int &n,int randomvalue)
   char ADN[4]={'A','T','C','G'};
   char* result=(char*) malloc((n+1)*sizeof(char));
   int i;
+  result[0]='x';
   for(i=0;i<n;i++)
   {
     result[i+1]=ADN[rand()%4];
