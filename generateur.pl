@@ -5,7 +5,7 @@ go :-
   T = ['A','T','C','G'],
   X=[],
   read(Taille),
-
+ write(Taille),write('\n'),
  remplir(T,X,Taille);true.
 
 remplir(_,Y,0):-
