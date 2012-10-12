@@ -5,17 +5,18 @@
 #include <fstream>
 
 int main(int argc, char *argv[]){
+  (void) argc;
   int taille=0;
   double min=9000;
   double max=-1;
   double sum=0;
   int value;
-  double time;
+  double time=0;
   int cpt=0;
-  char* S;
-  char* T;
+  char* S=NULL;
+  char* T=NULL;
   int (*pfonction)(char*,char*,const int &);
-  int ligne_courante;
+  int ligne_courante=0;
   bool sortie=false;
   std::ifstream fichier(argv[2]);
   
