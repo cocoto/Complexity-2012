@@ -3,7 +3,7 @@ int algo3 ( char* S, char* T,const int& taille){
     int i, j , a , b , sij;
     int max = 0;
     bool boolres;
-    char* PMK;
+    int* PMK;
     for(i=1;i<=taille;i++){
         for(j=i;j<=taille;j++){
             

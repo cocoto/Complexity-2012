@@ -1,5 +1,6 @@
 #include "algo2.cpp"
 #include "algo1.cpp"
+#include "algo3.cpp"
 #include "generateur.cpp"
 #include "fonction_temps.cpp"
 #include <fstream>
@@ -24,8 +25,7 @@ int main(int argc, char *argv[]){
   switch (atoi(argv[1])){
     case 1 : pfonction=&algo1;break;
     case 2 : pfonction=&algo2;break;
-    //Décommenter et supprimer cette ligne une fois l'algo 3 implémenté
-    //case 3 : pfonction=&algo3;break;
+    case 3 : pfonction=&algo3;break;
     default : std::cout<<"Algorithm "<<atoi(argv[1])<<" does not exist !\n"; return 0;break;
   }
   //Si la taille est passée en paramètre (aléatoire)
