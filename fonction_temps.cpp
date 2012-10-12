@@ -7,7 +7,6 @@ struct timeval start_utime, stop_utime;
 void crono_start()
 {
   struct rusage rusage;
-
   getrusage(RUSAGE_SELF, &rusage);
   start_utime = rusage.ru_utime;
 }

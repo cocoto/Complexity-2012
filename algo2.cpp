@@ -5,7 +5,7 @@
 #include <vector>
 #include <set>
 
-int algo2 ( char*& S, char*& T, int& taille){
+int algo2 ( char* S, char* T,const int& taille){
  
     int max = 0;
     int l , i , j ;
