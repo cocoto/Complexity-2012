@@ -65,7 +65,10 @@ int main(int argc, char *argv[]){
 	
 	//Résolution
 	crono_start();
+	for(int i=0;i<50000;i++)
+	{
 	value=(*pfonction)(S,T,taille);
+	}
 	crono_stop();
 	
 	//Mise à jour des statistiques
@@ -82,7 +85,7 @@ int main(int argc, char *argv[]){
 	cpt+=2;
 	
 	//Décommenter pour débug
-	std::cout<< S <<" et "<< T <<"  =  "<< value << " en "<<time<<"ms total "<<sum/1000<<"s \n";
+	//std::cout<< S <<" et "<< T <<"  =  "<< value << " en "<<time<<"ms total "<<sum/1000<<"s \n";
 	
 	//Libération de S et T (cf random_generate)
 	free(S);
@@ -113,7 +116,10 @@ int main(int argc, char *argv[]){
 	    }
 	      //Résolution
 	      crono_start();
+		for(int i=0;i<100000;i++)
+		{
 	      value=(*pfonction)(S,T,taille);
+		}
 	      crono_stop();
 	      
 	      
@@ -140,5 +146,5 @@ int main(int argc, char *argv[]){
     }
     
     //Impression des statistiques
-    std::cout<<"Temps minimum="<<min<<"ms Temps maximum="<<max<<"ms Temps moyen="<<sum/(cpt/2)<<"ms\n";
+    std::cout<<"minimum="<<min<<"ms maximum="<<max<<"ms moyen="<<sum/(cpt/2)<<"ms total="<<sum<<"ms nb_tests="<<cpt/2<<"\n";
   }

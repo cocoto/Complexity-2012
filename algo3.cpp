@@ -8,7 +8,7 @@ int algo3 ( char* S, char* T,const int& taille){
         for(j=i;j<=taille;j++){
             
             sij = j-i+1;
-            PMK = new int[sij];       
+            PMK = new int[sij + 1];       
             a = 0;
             b= -1;
             PMK[0] = -1;
