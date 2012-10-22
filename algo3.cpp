@@ -3,12 +3,12 @@ int algo3 ( char* S, char* T,const int& taille){
     int i, j , a , b , sij;
     int max = 0;
     bool boolres;
-    char* PMK;
+    int* PMK;
     for(i=1;i<=taille;i++){
         for(j=i;j<=taille;j++){
             
             sij = j-i+1;
-            PMK = new int[sij];       
+            PMK = new int[sij + 1];       
             a = 0;
             b= -1;
             PMK[0] = -1;
