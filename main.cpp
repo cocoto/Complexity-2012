@@ -65,10 +65,10 @@ int main(int argc, char *argv[]){
 	
 	//Résolution
 	crono_start();
-	for(int i=0;i<50000;i++)
-	{
+	//for(int i=0;i<50000;i++)
+	//{
 	value=(*pfonction)(S,T,taille);
-	}
+	//}
 	crono_stop();
 	
 	//Mise à jour des statistiques
@@ -116,10 +116,10 @@ int main(int argc, char *argv[]){
 	    }
 	      //Résolution
 	      crono_start();
-		for(int i=0;i<100000;i++)
-		{
-	      value=(*pfonction)(S,T,taille);
-		}
+		//for(int i=0;i<100000;i++)
+		//{
+		  value=(*pfonction)(S,T,taille);
+		//}
 	      crono_stop();
 	      
 	      
