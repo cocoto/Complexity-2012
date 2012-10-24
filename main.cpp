@@ -75,6 +75,7 @@ int main(int argc, char *argv[]){
 		 (*pfonction)(S,T,taille);
 		}
 		crono_stop();
+
 	
 		//Mise à jour des statistiques
 		time=crono_ms();
