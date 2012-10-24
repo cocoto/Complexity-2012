@@ -2,7 +2,12 @@
 
 int algo1( char* S, char* T,const int &n)
 {
-   int mlsuff[n][n];
+   int** mlsuff=(int**)malloc(n*sizeof(int*));
+   int cpt;
+   for(cpt=0;cpt<n;cpt++)
+   {
+	mlsuff[cpt]=(int*)malloc(n*sizeof(int));
+   }
    int i,j,max=0;
 
   //============Initialisation============
@@ -12,8 +17,6 @@ int algo1( char* S, char* T,const int &n)
   {
      mlsuff[i][0]= (S[i+1]==T[1])?1:0;
   }
-  
-  //n boucles
   for(j=0;j<n;j++)
   {
      mlsuff[0][j]= (S[1]==T[j+1])?1:0;
@@ -53,5 +56,10 @@ int algo1( char* S, char* T,const int &n)
        }
      }
    }
+   for(cpt=0;cpt<n;cpt++)
+   {
+	free(mlsuff[cpt]);
+   }
+   free(mlsuff);
    return max;
 }

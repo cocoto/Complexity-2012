@@ -10,7 +10,7 @@ int main(int argc, char *argv[]){
   double min;
   double max;
   double sum;
-  int value;
+  //int value;
   double time;
   int cpt;
   char* S=NULL;
