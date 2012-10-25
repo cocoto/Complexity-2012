@@ -1,0 +1,28 @@
+\part{Les algorithmes}
+\section{Choix d'implémentation}
+  \subsection{Algorithme 1}
+  Pour implementer l'algorithme 1, nous avons choisi de représenter Mlsuff comme un int**.\\
+  
+  Le remplissage de la matrice se fait en deux temps : \begin{itemize}
+  \item On remplit la premiere ligne et la premiere colonne de la matrice, qui revient à comparer le premier caractère de chaque tableau avec chacun de ceux de l'autre tableau.
+  \item On remplit le reste du tableau grâce à la formule liant Mlsuff\[i\]\[j\] à Mlsuff\[i+1\]\[j+1\].
+  \end{itemize}
+  \vspace{0.5cm}
+  
+  on reparcourt ensuite chaque case du tableau pour conserver le maximum que l'on renvoie en fin de parcours.\\
+  
+  \subsection{Algorithme 2}
+  
+  \subsection{Algorithme 3}
+  
+\section{Complexité théorique}
+  \subsection{Algorithme 1}
+  l'algorithme nécessite de parcourir 2 fois une matrice de taille n par n, ce qui équivaut à une complexité en $O(n^2)$ pour les parcours.\\
+
+  Les mêmes opérations sont effectuées sur chaque case, elles sont donc indépendantes de n, ce sont des opérations d'affectation, de test d'égalité et d'addition, c'est à dire toutes en $O(1)$.\\
+
+  La complexité reste donc en $O(n^2)$.
+  
+  \subsection{Algorithme 2}
+  
+  \subsection{Algorithme 3}
