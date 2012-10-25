@@ -1,0 +1,11 @@
+Nous avons été confrontés à un certain nombre de problèmes lors des premiers tests. En effet, le temps d’ exécution des trois algorithmes pour des petites valeurs (inférieures à 800 caractères) se situait en dessous de la milliseconde, plus petite unité admissible dans nos algorithmes et dans le projet en général.
+Afin de donner un peut plus de cohérence dans nos résultats (principalement les 12 premières lignes des tableaux), nous avons implémenté un système de boucle calculant un facteur d'exécution pour chaque jeu de test, permettant de passer outre ces limitations.
+En d'autres termes, pour les petites valeurs de $n$, il est nécessaire de comparer $facteur$ fois les mêmes chaînes entre le lancement et l'arrêt du chronomètre. Ce facteur est calculé pour chaque jeux de test de la façon suivante :
+\begin{lstlisting}
+ facteur=1;
+ tant que t(facteur resolutions)<5ms alors
+    facteur <- facteur*10;
+ fintantque
+\end{lstlisting}
+
+Nous précisons toutefois que la présentation des résultats et l'analyse effectuée ne reprend pas les résultats inférieurs à $1ms$ de façon exacte ($<1ms\ devient\ =0ms$).

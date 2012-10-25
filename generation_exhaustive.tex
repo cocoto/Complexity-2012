@@ -1,0 +1,29 @@
+Afin de générer l'ensemble des chaînes possibles de taille n pour un alphabet $\{A,B,C,D\}$, nous avons eu recours à un script en langage \textbf{prolog} (voir Annexe \ref{code_prolog}).
+Ce langage permet de facilement écrire des scripts usant (et abusant) du backtracking. Le script choisi une lettre à la position $i$ ($i\in \{1..n\})$, créé un point de choix, et passe à la case suivante.
+Une fois le mot formé, l'algorithme effectue un backtrack sur ses points de choix et génère ainsi l'ensemble des chaînes possibles. On utilise la redirection de sortie standard (commande \textit{>} en shell linux) de ce programme vers un fichier.
+On obtient par exemple sur une taille $n=2$ le fichier suivant :\\
+\begin{center}
+ \fbox{
+\begin{minipage}{0.9\textwidth}\centering
+ 2
+AA
+AT
+AC
+AG
+TA
+TT
+TC
+TG
+CA
+CT
+CC
+CG
+GA
+GT
+GC
+GG
+\end{minipage}
+}
+\end{center}
+
+Comparer toutes les chaînes générées, nous simulons la présence de deux curseurs dans le fichier, le premier parcourant les chaînes S, et le second toutes les suivantes (T).

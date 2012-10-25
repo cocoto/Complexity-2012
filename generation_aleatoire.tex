@@ -1,0 +1,29 @@
+Afin de générer aléatoirement des chaînes de taille $n$, nous créons la fonction \textit{random\_generate}, qui comme son nom l'indique, se repose sur la fonction rand() du langage C++ :
+
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\begin{center}
+\begin{lstlisting}
+  //Generate a random ADM sequence (size = n)
+// O(n) - Need to free the result
+char* random_generate(const int &n,int randomvalue)
+{
+  srand(time(NULL)+randomvalue);
+  char ADN[4]={'A','T','C','G'};
+  char* result=(char*) malloc((n+2)*sizeof(char));
+  int i;
+  result[0]='x';
+  for(i=0;i<n;i++)
+  {
+    result[i+1]=ADN[rand()%4];
+  }
+  result[i+1]='\0';
+  return result;
+}
+\end{lstlisting}
+\end{center}
+\end{minipage} 
+\end{center}
+
+La présence de l'entier \textbf{randomvalue} réside dans le fait que la fonction random n'est pas totalement aléaoire, et dépend en partie de l'heure système (en seconde).
+Ainsi, en appelant plusieurs fois la fonction dans la même seconde, les chaînes retournées seront toujours identiques. Il faut donc penser à incrémenter le compteur à chaque génération, et conserver la base de temps initial\footnote{À voir dans l'algorithme principal}.

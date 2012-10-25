@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt,twoside]{report}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel} %active le mode français
+\usepackage[latin1,utf8]{inputenc} % Mettre des accents
+\usepackage[top=2cm , bottom=2cm , left=2cm , right=2cm]{geometry} %propriétés de notre page
+\usepackage{amsmath} %liste de symboles et applications mathématiques
+\usepackage{amsfonts} %idem
+\usepackage{color} %Permet d'utiliser la couleur dans nos documents
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{listings} %Paquet de coloration syntaxique (langages)
+\usepackage{hyperref} % Créer des liens et des signets 
+\usepackage[babel=true]{csquotes} %permet les quotations (guillemets)
+\usepackage{graphicx} %Importation d'image
+\usepackage{fancyhdr} %en-tête et pieds de page+
+\usepackage{lastpage} %permet d'obtenir le nombre total de page
+\usepackage{multido}
+\usepackage{eurosym}
+\usepackage{listingsutf8}
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{colortbl} %permet de mettre de personnaliser les colones des tabular
+\usepackage{pdfpages}
+\setlength{\headheight}{15pt}
+\lstset{language=C,
+	breaklines=true,
+	numbers=left,
+	keywordstyle=\color{blue},
+	commentstyle=\color{Gray},
+	stringstyle=\color{red},
+	tabsize=4,
+	framexleftmargin=7mm,
+	frame=single
+	}
+% Informations du rapport
+\title {Rapport de projet \\ Le Problème PLTC}
+\author {Quentin Tonneau - Adrien Lardenois}
+\date{}
+%Propriétés des liens
+% \hypersetup{
+% colorlinks=true, %colorise les liens  
+% urlcolor= blue, %couleur des hyperliens 
+% linkcolor= blue,%couleur des liens internes
+% citecolor=black
+% } 
+%\setlength{\parindent}{0cm}
+\addto\captionsfrench{
+	\renewcommand{\chaptername}{Partie}
+}
+
+\fancypagestyle{plain}
+{
+
+	\fancyhead{}
+	\fancyfoot{}
+	\lhead{Quentin Tonneau - Adrien Lardenois}
+	\rhead{Université de Nantes}
+	\chead{Le problème PTLC}
+}
+\begin{document}
+\pagestyle{plain}
+\renewcommand\labelitemi{$\circ$}
+\renewcommand\labelitemii{$\bullet$}
+\tableofcontents
+\newpage
+\thispagestyle{empty} ~
+
+\fancypagestyle{plain}
+{
+
+	\fancyhead{}
+	\fancyfoot{}
+	\lhead{Quentin Tonneau - Adrien Lardenois}
+	\rhead{Université de Nantes}
+	\chead{Recherche topswops}
+	\lfoot[\thepage]{}
+	\rfoot[]{\thepage}
+}
+
+\part{Introduction}
+ 
+\part{Les algorithmes}
+  \section{Algorithme 1}
+  \section{Algorithme 2}
+  \section{Algorithme 3}
+\part{Méthode d'analyse}
+   \section{Génération exhaustive}
+      \input{generation_exhaustive}
+   \section{Génération aléatoire}
+      \input{generation_aleatoire}
+   \section{Algorithme principal}
+      \input{algorithme_principal.tex}
+   \section{Les contraintes matérielles}
+      \input{contraintes_materiel}
+\part{Résultats et Interprétation}
+  \section{Résultats}
+      %\input{resultats}
+  \section{Interpolation des courbes}
+      %\input{interpolation}
+\part{Conclusion}
+\end{document}
+

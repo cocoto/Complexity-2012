@@ -1,0 +1,10 @@
+L'algorithme principal est en charge de génèrer ou de charger un ensemble de jeux de test selon la demande de l'utilisateur. Le programme doit être appelé selon la commande suivante :\\
+\begin{verbatim}
+ <executable> <numero de l'algorithme> [{<taille>|<fichier d'instance>}]*
+\end{verbatim}
+
+Ce dernier récupère donc en premier argument le numéro (1,2,3) de l'algorithme sélectionné, et génère un nombre de jeux de test aléatoire dans un temps inférieur à 3 minutes si le paramètre est un chiffre, ou récupère et ``appaire'' toutes les chaînes du fichier dont le nom correspond à ce paramètre\footnote{De ce fait, les noms de fichier ne doivent pas commencer par un chiffre}.\\
+Ensuite, une fonction de chronométrage se lance au début de la comparaison de deux chaînes, et s'arrête à la fin de celle-ci. Un ensemble de variables (min, max, time, sum) s'occupe de conserver et gérer les statistiques temporelles liées à ces exécutions.
+
+
+Nous avons choisi cette implémentation car elle permet de rester souple (si besoin de tests spécifiques, il suffit de générer par quelconque moyen un fichier correspondant), et autonome, dans la mesure ou une seule exécution permet de récupérer les résultats complets d'un algorithme (ne nécessite pas une présence sur la machine toutes les 3 minutes).
