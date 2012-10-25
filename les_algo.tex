@@ -1,5 +1,8 @@
 \part{Les algorithmes}
 \section{Choix d'implémentation}
+  
+  Nous avons choisi d'implémenter ces algorithmes en C++, à la fois simple à aborder et efficace.
+  
   \subsection{Algorithme 1}
   Pour implementer l'algorithme 1, nous avons choisi de représenter Mlsuff comme un int**.\\
   
@@ -13,8 +16,23 @@
   
   \subsection{Algorithme 2}
   
+	Cet algorithme est implémenté par 3 boucles \textbf{for} imbriquées : \begin{itemize}
+\item Une pour traiter toutes les tailles de 1 à n.
+\item Une pour choisir chaque sous-chaîne de la taille en cours dans S.
+\item Une pour choisir chaque sous-chaîne de la taille en cours dans T.
+ \end{itemize}
+ \vspace{0.5cm}
+ 
+ Au sein de la derniere boucle, on effectue la comparaison de la paire de chaîne en cours et si la condition est respectée on affecte la nouvelle valeur à {\textbf max}.
+ 
   \subsection{Algorithme 3}
-  
+	
+	Cet algorithme est principalement codé comme une boucle {\textbf tant que} pour le remplissage d'un tableau PMK (int*), et d'une boucle {\textbf for} pour la comparaison avec T.\\
+	
+	Ces étapes sont éxécutées systématiquement au sein de 2 boucles {\textbf for}.\\
+	
+	Le tableau $S_{ij}$ n'est jamais créé, on se contente d'acceder à la case de S en opérant un décalage en fonction du i et du j actuel. On évite ainsi de créer et recopier le tableau pour chaque paire de i j.
+	
 \section{Complexité théorique}
   \subsection{Algorithme 1}
   l'algorithme nécessite de parcourir 2 fois une matrice de taille n par n, ce qui équivaut à une complexité en $O(n^2)$ pour les parcours.\\
@@ -24,5 +42,22 @@
   La complexité reste donc en $O(n^2)$.
   
   \subsection{Algorithme 2}
-  
+	Cet algorithme contient 3 boucles imbriquées dont la longueur dépend de la taille n des données (sans être égale à n).\\
+	
+	A l'interieur de ces boucles, on effectue la comparaison de deux chaînes de taille l ( $1 \leq l \leq n$ ), ce qui donne une opération de complexité $O(l)$, soit au pire $O(n)$.\\
+	
+	Nous obtenons donc une complexité en $O(n^4)$
+	
+	
   \subsection{Algorithme 3}
+  
+	L'algorithme s'exécute pour toute paire i,j avec ($ 1 \leq i \leq j \leq n$). Cela revient à une boucle de complexité $O(n^2)$.\\
+
+	La première partie de l'algorithme est une boucle {\textbf tant que}, {\textbf a} augmentant régulièrement et {\textbf sij } allant de 1 à n, on obtient une complexité $O(n)$ pour cette boucle. De plus tout ce que s'effectue au sein de la boucle est en $O(1)$ y compris la boucle des lignes 6-8.\\
+
+	La seconde partie est une boucle {\textbf Pour } de taille n. De même tout ce qui s'effectue à l'interieur est en $O(1)$.\\
+	
+	Le nombre d'opérations nécessaires est donc en $O(n)$ au sein d'une boucle en $O(n^2)$.
+	
+	On a donc une complexité globale en $O(n^3)$.
+	
