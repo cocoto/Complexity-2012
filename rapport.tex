@@ -37,13 +37,13 @@
 \date{}
 \renewcommand{\thesection}{\arabic{section}}
 %Propriétés des liens
-% \hypersetup{
-% colorlinks=true, %colorise les liens  
-% urlcolor= blue, %couleur des hyperliens 
-% linkcolor= blue,%couleur des liens internes
-% citecolor=black
-% } 
-%\setlength{\parindent}{0cm}
+\hypersetup{
+colorlinks=true, %colorise les liens  
+urlcolor= blue, %couleur des hyperliens 
+linkcolor= blue,%couleur des liens internes
+citecolor=black
+} 
+\setlength{\parindent}{0cm}
 \addto\captionsfrench{
 	\renewcommand{\chaptername}{Partie}
 }
@@ -72,17 +72,17 @@
 	\fancyfoot{}
 	\lhead{Quentin Tonneau - Adrien Lardenois}
 	\rhead{Université de Nantes}
-	\chead{Recherche topswops}
+	\chead{Le problème PTLC}
 	\lfoot[\thepage]{}
 	\rfoot[]{\thepage}
 }
 
-\part{Introduction}
- 
+\chapter{Introduction}
+\input{introduction}
 \input{les_algo}
 
  
-\part{Méthode d'analyse}
+\chapter{Méthode d'analyse}
    \section{Génération exhaustive}
       \input{generation_exhaustive}
    \section{Génération aléatoire}
@@ -91,11 +91,13 @@
       \input{algorithme_principal.tex}
    \section{Les contraintes matérielles}
       \input{contraintes_materiel}
-\part{Résultats et Interprétation}
+\chapter{Résultats et Interprétation}
   \section{Résultats}
-      %\input{resultats}
+      \input{resultats}
+   \newpage
   \section{Interpolation des courbes}
-      %\input{interpolation}
-\part{Conclusion}
+      \input{interpolation}
+\chapter{Conclusion}
+      \input{conclusion}
 \end{document}
 

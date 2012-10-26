@@ -1,4 +1,4 @@
-\part{Les algorithmes}
+\chapter{Les algorithmes}
 \section{Choix d'implémentation}
   
   Nous avons choisi d'implémenter ces algorithmes en C++, langage à la fois simple pour ce que l'on veut faire et efficace.
@@ -34,6 +34,7 @@
 	Le tableau $S_{ij}$ n'est jamais créé, on se contente d'acceder à la case de S en opérant un décalage en fonction du i et du j actuel. On évite ainsi de créer et recopier le tableau pour chaque paire de i j.
 	
 \section{Complexité théorique}
+  \label{c_theorique}
   \subsection{Algorithme 1}
   l'algorithme nécessite de parcourir 2 fois une matrice de taille n par n, ce qui équivaut à une complexité en $O(n^2)$ pour les parcours.\\
 
